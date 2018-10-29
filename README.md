@@ -10,7 +10,7 @@
   </a>
   <h1>Fork Loader</h1>
   <h3>base on <a href="https://github.com/webpack-contrib/worker-loader">worker-loader</a></h3>
-  <p>This loader registers the script as <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Worker</a><p>
+  <p>This loader registers the script as <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_fork_modulepath_args_options">fork code</a><p>
 </div>
 
 
