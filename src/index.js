@@ -23,11 +23,11 @@ export default function loader() {}
 export function pitch(request) {
   const options = loaderUtils.getOptions(this) || {};
 
-  validateOptions(schema, options, 'Worker Loader');
+  validateOptions(schema, options, 'Fork Loader');
 
   if (!this.webpack) {
     throw new LoaderError({
-      name: 'Worker Loader',
+      name: 'Fork Loader',
       message: 'This loader is only usable with webpack'
     });
   }
@@ -36,7 +36,7 @@ export function pitch(request) {
 
   const cb = this.async();
 
-  const filename = loaderUtils.interpolateName(this, options.name || '[hash].worker.js', {
+  const filename = loaderUtils.interpolateName(this, options.name || '[hash].fork.js', {
     context: options.context || this.rootContext || this.options.context,
     regExp: options.regExp,
   });

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Errors Loader Error 1`] = `
-"Worker Loader
+"Fork Loader
 
 This loader is only usable with webpack
 "
 `;
 
 exports[`Errors Validation Error 1`] = `
-"Worker Loader Invalid Options
+"Fork Loader Invalid Options
 
 options.name should be string
 "
