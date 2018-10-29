@@ -94,10 +94,6 @@ export function pitch(request) {
         options
       );
 
-      if (options.fallback === false) {
-        delete this._compilation.assets[worker.file];
-      }
-
       return cb(null, `module.exports = function() {\n  return ${worker.factory};\n};`);
     }
 
