@@ -18,6 +18,7 @@ export default function (name, config = {}) {
       output: {
         path: path.resolve(__dirname, `../__expected__/${name}`),
         filename: 'bundle.js',
+        libraryTarget: 'commonjs2'
       },
       module: {
         rules: [

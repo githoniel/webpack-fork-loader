@@ -1,8 +1,8 @@
 {
-  "name": "worker-loader",
-  "version": "2.0.0",
-  "author": "Tobias Koppers @sokra",
-  "description": "worker loader module for webpack",
+  "name": "webpack-fork-loader",
+  "version": "1.0.0",
+  "author": "githoniel",
+  "description": "fork loader module for webpack packing electron",
   "repository": "https://github.com/webpack-contrib/worker-loader.git",
   "bugs": "https://github.com/webpack-contrib/worker-loader/issues",
   "homepage": "https://github.com/webpack-contrib/worker-loader",
