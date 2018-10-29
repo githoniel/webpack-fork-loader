@@ -1,8 +1,5 @@
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
-[![deps][deps]][deps-url]
-[![test][test]][test-url]
-[![coverage][cover]][cover-url]
 
 <div align="center">
   <a href="https://github.com/webpack/webpack">
