@@ -20,7 +20,7 @@ const getWorker = (file, content, options) => {
     return `require(${InlineWorkerPath})(${JSON.stringify(content)}, ${fallbackWorkerPath})`;
   }
 
-  return `new Worker(${publicWorkerPath})`;
+  return `require('child_process').fork(${publicWorkerPath})`;
 };
 
 export default getWorker;
