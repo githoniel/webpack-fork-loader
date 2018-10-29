@@ -86,3 +86,13 @@ webpack assets is used
   options: { publicPath: '/scripts/fork/' }
 }
 ```
+
+## License
+
+#### [MIT](./LICENSE)
+
+[npm]: https://img.shields.io/npm/v/worker-loader.svg
+[npm-url]: https://npmjs.com/package/node-loader-loader
+
+[node]: https://img.shields.io/node/v/worker-loader.svg
+[node-url]: https://nodejs.org
