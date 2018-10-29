@@ -1,9 +1,3 @@
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
-[![deps][deps]][deps-url]
-[![test][test]][test-url]
-[![coverage][cover]][cover-url]
-
 <div align="center">
   <a href="https://github.com/webpack/webpack">
     <img width="200" height="200" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon.svg">
