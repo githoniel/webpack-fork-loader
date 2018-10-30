@@ -1,5 +1,5 @@
 {
-  "name": "node-fork-loader",
+  "name": "webpack-fork-loader",
   "version": "1.0.0",
   "author": "githoniel",
   "description": "fork loader module for webpack packing electron",

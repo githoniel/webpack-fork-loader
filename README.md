@@ -14,7 +14,7 @@
 <h2 align="center">Install</h2>
 
 ```bash
-npm i -D node-fork-loader
+npm i -D webpack-fork-loader
 ```
 
 <h2 align="center"><a href="https://webpack.js.org/concepts/loaders">Usage</a></h2>
@@ -23,7 +23,7 @@ npm i -D node-fork-loader
 
 **App.js**
 ```js
-import CProcess from 'node-fork-loader!./fork.js';
+import CProcess from 'webpack-fork-loader!./fork.js';
 ```
 
 ### `Config`
@@ -35,7 +35,7 @@ import CProcess from 'node-fork-loader!./fork.js';
     rules: [
       {
         test: /\.fork\.js$/,
-        use: { loader: 'node-fork-loader' }
+        use: { loader: 'webpack-fork-loader' }
       }
     ]
   }
@@ -66,7 +66,7 @@ To set a custom name for the output script, use the `name` parameter. The name m
 *webpack.config.js**
 ```js
 {
-  loader: 'node-fork-loader',
+  loader: 'webpack-fork-loader',
   options: { name: 'ForkName.[hash].js' }
 }
 ```
@@ -79,7 +79,7 @@ webpack assets is used
 **webpack.config.js**
 ```js
 {
-  loader: 'node-fork-loader'
+  loader: 'webpack-fork-loader'
   options: { publicPath: '/scripts/fork/' }
 }
 ```
