@@ -1,8 +1,11 @@
 /* eslint-disable multiline-ternary */
 const getWorker = (file, content, options) => {
-  const publicPath = options.publicPath
-    ? JSON.stringify(options.publicPath)
-    : '__webpack_public_path__';
+  let publicPath;
+  if (options.publicPath) {
+    publicPath = options.evalPath ? options.publicPath : JSON.stringify(options.publicPath);
+  } else {
+    publicPath = '__webpack_public_path__';
+  }
 
   const publicWorkerPath = `${publicPath} + ${JSON.stringify(file)}`;
 

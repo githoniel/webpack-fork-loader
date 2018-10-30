@@ -1,6 +1,6 @@
 {
   "name": "webpack-fork-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "githoniel",
   "description": "fork loader module for webpack packing electron",
   "repository": "https://github.com/githoniel/webpack-fork-loader.git",

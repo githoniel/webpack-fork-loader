@@ -6,6 +6,9 @@
     },
     "publicPath": {
       "type": "string"
+    },
+    "evalPath": {
+        "type": "boolean"
     }
   },
   "additionalProperties": false

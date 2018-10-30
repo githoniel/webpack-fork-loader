@@ -58,6 +58,8 @@ process.on('message', (message) => {});
 |:--:|:--:|:-----:|:----------|
 |[**`name`**](#name)|`{String}`|`[hash].fork.js`|Set a custom name for the output script| 
 |[**`publicPath`**](#publicPath)|`{String}`|`null`|Override the path from which fork scripts are downloaded|
+|[**`evalPath`**](#publicPath)|`{Boolean}`|`null`|if `publicPath` is treat as a static `String`|
+
 
 ### `name`
 
@@ -81,6 +83,18 @@ webpack assets is used
 {
   loader: 'webpack-fork-loader'
   options: { publicPath: '/scripts/fork/' }
+}
+```
+
+### `evalPath`
+
+if wants to get dynamic publicPath like '__dirname', you should set `evalPath = true`
+
+**webpack.config.js**
+```js
+{
+  loader: 'webpack-fork-loader'
+  options: {  publicPath: '__dirname + "/"', evalPath: true }
 }
 ```
 
