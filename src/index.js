@@ -14,6 +14,7 @@ import validateOptions from 'schema-utils';
 import NodeTargetPlugin from 'webpack/lib/node/NodeTargetPlugin';
 import SingleEntryPlugin from 'webpack/lib/SingleEntryPlugin';
 import WebWorkerTemplatePlugin from 'webpack/lib/webworker/WebWorkerTemplatePlugin';
+import ExternalsPlugin from 'webpack/lib/ExternalsPlugin';
 
 import getWorker from './workers/';
 import LoaderError from './Error';
@@ -43,6 +44,8 @@ export function pitch(request) {
 
   const worker = {};
 
+  const compilerOptions = this._compiler.options || {};
+
   worker.options = {
     filename,
     chunkFilename: `[id].${filename}`,
@@ -54,6 +57,15 @@ export function pitch(request) {
 
   // Tapable.apply is deprecated in tapable@1.0.0-x.
   // The plugins should now call apply themselves.
+  if (compilerOptions.externals) {
+    const externalsType =
+      compilerOptions.output.libraryTarget ||
+      compilerOptions.externalsType ||
+      (compilerOptions.output.library && compilerOptions.output.library.type) ||
+      (compilerOptions.output.module ? 'module' : 'var');
+    new ExternalsPlugin(externalsType, compilerOptions.externals).apply(worker.compiler);
+  }
+
   new WebWorkerTemplatePlugin(worker.options).apply(worker.compiler);
 
   if (this.target !== 'webworker' && this.target !== 'web') {
